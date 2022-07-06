@@ -1,0 +1,22 @@
+{
+  "name": "baemin",
+  "version": "0.0.1",
+  "description": "baemin signup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woowa-techcamp-2022/baemin-leehyeongjun.git"
+  },
+  "keywords": [
+    "baemin"
+  ],
+  "author": "leehyeongjun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/woowa-techcamp-2022/baemin-leehyeongjun/issues"
+  },
+  "homepage": "https://github.com/woowa-techcamp-2022/baemin-leehyeongjun#readme"
+}
