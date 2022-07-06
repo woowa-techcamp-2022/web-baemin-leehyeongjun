@@ -2,9 +2,9 @@
   "name": "baemin",
   "version": "0.0.1",
   "description": "baemin signup",
-  "main": "index.js",
+  "main": "<root>/server/router/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "node server/router/app.js"
   },
   "repository": {
     "type": "git",
