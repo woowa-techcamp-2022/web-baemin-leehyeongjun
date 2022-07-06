@@ -2,8 +2,9 @@ doctype html
 html
     head 
         meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
-        link(rel="stylesheet" href="assets/style/app.css")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        link(rel="stylesheet" href="assets/style/common.css")
+        link(rel="stylesheet" href="assets/style/main.css")
         title My배민
     body 
         div(class="viewport-container")
@@ -26,29 +27,35 @@ html
                         li(class="grid-menu-item-wrap")
                             a(class="grid-menu-item" href="#포인트")
                                 img(class="grid-menu-img" alt="포인트" src="assets/img/point.png")
+                                span(class="grid-menu-text") 포인트
                         li(class="grid-menu-item-wrap")
                             a(class="grid-menu-item" href="#쿠폰함")
                                 img(class="grid-menu-img" alt="쿠폰함" src="assets/img/coupon.png")
+                                span(class="grid-menu-text") 쿠폰함
                         li(class="grid-menu-item-wrap")
                             a(class="grid-menu-item" href="#선물하기")
                                 img(class="grid-menu-img" alt="선물하기" src="assets/img/present.png")
+                                span(class="grid-menu-text") 선물하기
 
                     div(class="row")
                         li(class="grid-menu-item-wrap")
                             a(class="grid-menu-item" href="#찜")
                                 img(class="grid-menu-img" alt="찜" src="assets/img/cart.png")
+                                span(class="grid-menu-text") 찜
                         li(class="grid-menu-item-wrap")
                             a(class="grid-menu-item" href="#주문내역")
                                 img(class="grid-menu-img" alt="주문내역" src="assets/img/order.png")
+                                span(class="grid-menu-text") 주문내역
                         li(class="grid-menu-item-wrap")
                             a(class="grid-menu-item" href="#리뷰관리")
                                 img(class="grid-menu-img" alt="리뷰관리" src="assets/img/review.png")
+                                span(class="grid-menu-text") 리뷰관리
 
                 a(class="event-menu-wrap")
                     div(class="event-img-wrap")
                         img(class="event-img" alt="이벤트이미지" src="assets/img/root.png")
                     div(class="event-text-wrap")
-                        span(class="event-text")
+                        span(class="event-text") 일회용품 덜 쓰기, 함께해요!
                     div(class="event-right-arrow-wrap")
                         img(class="event-right-arrow" alt="event-right-arrow" src="assets/img/right-arrow.png")
 
@@ -59,7 +66,7 @@ html
                                 div(class="text-wrap")
                                     span(class="list-menu-text") 배민페이 등록
                                     div(class="list-menu-new-img-wrap")
-                                        img(class="list-menu-new-img")
+                                        img(class="list-menu-new-img" alt="new-img" src="assets/img/new.png")
                                 div(class="text-wrap")
                                     span(class="list-menu-sub-text") 배민페이로 결제하면 최대 5.5% 배민포인트가 적립됩니다!
                             div(class="right-arrow-wrap")
@@ -71,7 +78,7 @@ html
                                 div(class="text-wrap")
                                     span(class="list-menu-text") 가족계정 관리
                                     div(class="list-menu-new-img-wrap")
-                                        img(class="list-menu-new-img")
+                                        img(class="list-menu-new-img" alt="new-img" src="assets/img/new.png")
                                 div(class="text-wrap")
                                     span(class="list-menu-sub-text") 결제수단을 관리해 우리 가족의 끼니를 챙겨주세요.
                             div(class="right-arrow-wrap")
