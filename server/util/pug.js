@@ -6,7 +6,8 @@ const pug = require("pug");
  * @return {string}
  */
 const render = (path, data) => {
-  return pug.renderFile(path, data);
+  const html = pug.renderFile(path, data);
+  return html;
 };
 
 module.exports = {

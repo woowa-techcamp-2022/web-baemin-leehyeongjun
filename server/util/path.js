@@ -1,7 +1,7 @@
-function getRootPath() {
-  return process.cwd();
-}
+const path = require("path");
+const ROOT_PATH = process.cwd();
 
 module.exports = {
-  getRootPath,
+  ROOT_PATH,
+  join: path.join,
 };
