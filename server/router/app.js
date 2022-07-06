@@ -12,4 +12,11 @@ app.get("/", (req, res) => {
   res.status(200).type("html").send(html);
 });
 
+app.get("/login", (req, res) => {
+  const loginPath = join(ROOT_PATH, "web", "login.pug");
+  const html = pug(loginPath, {});
+
+  res.status(200).type("html").send(html);
+});
+
 app.listen(3000);
