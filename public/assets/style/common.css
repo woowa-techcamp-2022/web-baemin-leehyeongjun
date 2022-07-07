@@ -213,7 +213,8 @@ a {
   line-height: 3.125rem;
 }
 
-.app-header-next {
+.app-header-next,
+.app-header-complete {
   position: absolute;
   right: 1.2rem;
   top: 0.9rem;

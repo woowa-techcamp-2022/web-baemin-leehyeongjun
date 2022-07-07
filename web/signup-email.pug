@@ -1,0 +1,43 @@
+doctype html 
+html
+    include header.pug
+        link(rel="stylesheet" href="/assets/style/privacy-info.css")
+        title 회원가입
+    body 
+        div(class="viewport-container")
+            div(class="app-container")
+                header(class="app-header") 
+                    a(class="app-header-left-arrow-wrap" href="/login")
+                        img(class="app-header-left-arrow-img" alt="cancel" src="/assets/img/left-arrow.png")
+                    span(class="app-header-text") 회원가입
+                    a(class="app-header-complete" href="/login") 완료
+                
+                div(class="input-wrap")
+                    div(class="flex-row")
+                        div(class="input-divider")
+                            div(class="input-item")
+                                input(type="email")
+                                span(class="input-text") 이메일
+                                i(class="clear-icon") X
+                                i(class="valid-icon")
+                        button(class="dup-check-button") 중복확인
+
+                    div(class="input-item")
+                        input(type="text")
+                        span(class="input-text") 닉네임
+                        i(class="clear-icon") X
+                        i(class="valid-icon")
+
+                    div(class="input-item error")
+                        input(type="password")
+                        span(class="input-text") 비밀번호
+                        i(class="clear-icon") X
+                        i(class="valid-icon")
+                        span(class="error-text") 10자 이상 영어 대문자, 소문자, 숫자, 특수문자 중 2종류를 조합해야합니다.
+
+                    div(class="input-item")
+                        input(type="tel")
+                        span(class="input-text") 생년월일
+                        i(class="clear-icon") X
+                        i(class="valid-icon")
+                        span(class="error-text") 10자 이상 영어 대문자, 소문자, 숫자, 특수문자 중 2종류를 조합해야합니다.
