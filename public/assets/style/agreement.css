@@ -166,3 +166,11 @@ input[type="radio"]:checked + .radio-label::after {
 .button-wrap .btn {
   position: absolute;
 }
+
+.next-button {
+  display: none;
+}
+
+input[type="checkbox"]:checked + .next-button {
+  display: block;
+}

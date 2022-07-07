@@ -3,6 +3,7 @@ html
     include header.pug
         link(rel="stylesheet" href="/assets/style/agreement.css")
         title 회원가입
+        script(defer type="module" src="/assets/script/agreement.js")
     body 
         div(class="viewport-container")
             div(class="app-container")
@@ -16,37 +17,37 @@ html
                     h1(class="explain-text") 약관동의가 필요해요
 
                 div(class="checkbox-all-wrap")
-                    input(type="checkbox" id="check-all")
+                    input(type="checkbox" id="check-all" name="check-all")
                     label(for="check-all" class="checkbox-label")
                         span(class="checkbox-label-text") 전체 동의
                 form(class="check-box-form")
                     ul(class="check-box-list-wrap")
                         li(class="check-box-list")
-                            input(type="checkbox" id="usage-agreement")
+                            input(type="checkbox" id="usage-agreement" name="usage-agreement")
                             label(for="usage-agreement" class="checkbox-label")
                                 span(class="checkbox-label-text") 배달의민족 이용약관 동의
                             a(class="right-arrow-wrap" href="#배달의민족이용약관동의")
                                 img(class="right-arrow" alt="arrow-icon" src="/assets/img/right-arrow.png")
                         li(class="check-box-list")
-                            input(type="checkbox" id="e-trade-agreement")
+                            input(type="checkbox" id="e-trade-agreement" name="e-trade-agreement")
                             label(for="e-trade-agreement" class="checkbox-label")
                                 span(class="checkbox-label-text") 전자금융거래 이용약관 동의
                             a(class="right-arrow-wrap" href="#전자금융거래이용약관동의")
                                 img(class="right-arrow" alt="arrow-icon" src="/assets/img/right-arrow.png")
                         li(class="check-box-list")
-                            input(type="checkbox" id="personal-info-collect-agreement")
+                            input(type="checkbox" id="personal-info-collect-agreement" name="personal-info-collect-agreement")
                             label(for="personal-info-collect-agreement" class="checkbox-label")
                                 span(class="checkbox-label-text") 개인정보 수집이용 동의
                             a(class="right-arrow-wrap" href="#개인정보수집이용동의")
                                 img(class="right-arrow" alt="arrow-icon" src="/assets/img/right-arrow.png")
                         li(class="check-box-list")
-                            input(type="checkbox" id="personal-info-share-agreement")
+                            input(type="checkbox" id="personal-info-share-agreement" name="personal-info-share-agreement")
                             label(for="personal-info-share-agreement" class="checkbox-label")
                                 span(class="checkbox-label-text") 개인정보 제3자 제공 동의(선택)
                             a(class="right-arrow-wrap" href="#개인정보제3자제공동의")
                                 img(class="right-arrow" alt="arrow-icon" src="/assets/img/right-arrow.png")
                         li(class="check-box-list")
-                            input(type="checkbox" id="marketing-agreement")
+                            input(type="checkbox" id="marketing-agreement" name="marketing-agreement")
                             label(for="marketing-agreement" class="checkbox-label")
                                 span(class="checkbox-label-text") 마케팅 정보 메일, SNS 수신동의(선택)
 
@@ -70,7 +71,7 @@ html
                 div(class="button-wrap")
                     button(class="btn" disabled) 다음으로
                     input(type="checkbox" id="valid-check")
-                    a(class="btn" href="/signup/phone") 다음으로
+                    a(class="btn next-button" href="/signup/phone") 다음으로
                 
 
                             
