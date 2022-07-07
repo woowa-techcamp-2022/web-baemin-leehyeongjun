@@ -92,6 +92,10 @@ function init() {
       case "birth-clear-button":
         proxy.birth = "";
         break;
+
+      case "complete-button":
+        postUser(proxy.email, proxy.password, proxy.nickname);
+        break;
     }
   });
 }
@@ -197,6 +201,32 @@ function notify(proxy) {
   } else {
     completeButton.classList.add("hidden");
   }
+}
+
+function postUser(email, password, nickname) {
+  const form = document.createElement("form");
+  form.style.display = "none";
+
+  const emailInput = document.createElement("input");
+  const passwordInput = document.createElement("input");
+  const nicknameInput = document.createElement("input");
+  emailInput.value = email;
+  emailInput.name = "email";
+  passwordInput.type = "password";
+  passwordInput.value = password;
+  passwordInput.name = "password";
+  nicknameInput.value = nickname;
+  nicknameInput.name = "nickname";
+
+  form.appendChild(emailInput);
+  form.appendChild(passwordInput);
+  form.appendChild(nicknameInput);
+
+  form.method = "post";
+  form.action = "/api/user";
+
+  document.body.appendChild(form);
+  form.submit();
 }
 
 init();

@@ -1,13 +1,16 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
+const bodyParser = require("body-parser");
 const { pug } = require("../util/pug");
 const { ROOT_PATH, join } = require("../util/path");
 const { setSession } = require("../middleware/session");
 const signupRouter = require("./signup");
+const apiRouter = require("./api");
 
 const app = express();
 
 app.use(cookieParser());
+app.use(bodyParser());
 app.use(express.static("public"));
 app.use(setSession);
 
@@ -25,5 +28,6 @@ app.get("/login", (req, res) => {
 });
 
 app.use("/signup", signupRouter);
+app.use("/api", apiRouter);
 
 app.listen(3000);
