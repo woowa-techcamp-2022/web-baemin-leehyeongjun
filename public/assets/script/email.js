@@ -2,7 +2,7 @@
  * 이메일 및 패스워드 입력 페이지
  */
 
-import { checkBirth, checkPassword, formatBirth } from "./util.js";
+import { checkBirth, checkPassword, formatBirth, hash } from "./util.js";
 
 function init() {
   const handler = {
@@ -213,7 +213,7 @@ function postUser(email, password, nickname) {
   emailInput.value = email;
   emailInput.name = "email";
   passwordInput.type = "password";
-  passwordInput.value = password;
+  passwordInput.value = hash(password);
   passwordInput.name = "password";
   nicknameInput.value = nickname;
   nicknameInput.name = "nickname";
