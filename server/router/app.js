@@ -29,6 +29,12 @@ app.get("/login", redirectLoginUser, (req, res) => {
   res.status(200).type("html").send(html);
 });
 
+app.get("/logout", (req, res) => {
+  const session = getSession(req);
+  session["nickname"] = null;
+  res.redirect("/");
+});
+
 app.use("/signup", signupRouter);
 app.use("/api", apiRouter);
 
