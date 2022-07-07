@@ -1,8 +1,11 @@
 const express = require("express");
 const { pug } = require("../util/pug");
 const { ROOT_PATH, join } = require("../util/path");
+const { redirectLoginUser } = require("../middleware/login-redirect");
 
 const router = express.Router();
+
+router.use(redirectLoginUser);
 
 router.get("/agreement", (req, res) => {
   const agreementPath = join(ROOT_PATH, "web", "signup-agreement.pug");
