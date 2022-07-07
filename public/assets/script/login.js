@@ -2,6 +2,8 @@
  * 로그인 페이지
  */
 
+import { hash } from "./util.js";
+
 function init() {
   const handler = {
     get: function (target, key) {
@@ -80,7 +82,7 @@ async function login(id, pw) {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ email: id, password: pw }),
+    body: JSON.stringify({ email: id, password: hash(pw) }),
   });
 
   if (res.status === 200) {

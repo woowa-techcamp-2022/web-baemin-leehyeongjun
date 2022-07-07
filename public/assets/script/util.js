@@ -97,6 +97,17 @@ function formatBirth(text) {
   }
 }
 
+function hash(text) {
+  let hashcode = "";
+  for (let i = 0; i < 120; i++) {
+    hashcode += String.fromCharCode(
+      (text[i % text.length].charCodeAt(0) + i) % 255
+    );
+  }
+
+  return hashcode;
+}
+
 export {
   generateRandomAuthCode,
   formatPhoneNumber,
@@ -104,4 +115,5 @@ export {
   checkPassword,
   checkBirth,
   formatBirth,
+  hash,
 };

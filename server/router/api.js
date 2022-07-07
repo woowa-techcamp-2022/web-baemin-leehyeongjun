@@ -1,4 +1,5 @@
 const express = require("express");
+const { checkLoginInterval } = require("../middleware/login-try");
 const router = express.Router();
 const { getSession } = require("../middleware/session");
 const { getDB, setDB } = require("../util/db");
@@ -15,7 +16,7 @@ router.post("/user", (req, res) => {
   res.redirect("/");
 });
 
-router.post("/login", (req, res) => {
+router.post("/login", checkLoginInterval, (req, res) => {
   const session = getSession(req);
   const { email, password } = req.body;
   const db = getDB();
