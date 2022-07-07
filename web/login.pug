@@ -1,18 +1,14 @@
 doctype html 
 html
-    head 
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible" content="IE=edge")
-        meta(name="viewport" content="width=device-width, initial-scale=1")
-        link(rel="stylesheet" href="assets/style/common.css")
-        link(rel="stylesheet" href="assets/style/login.css")
+    include header.pug
+        link(rel="stylesheet" href="/assets/style/login.css")
         title 로그인
     body 
         div(class="viewport-container")
             div(class="app-container")
                 header(class="app-header") 
                     a(class="app-header-cancel-wrap" href="/")
-                        img(class="app-header-cancel-img" alt="cancel" src="assets/img/cancel.png")
+                        img(class="app-header-cancel-img" alt="cancel" src="/assets/img/cancel.png")
                     span(class="app-header-text") 로그인
                 form(class="login-form")
                     input(class="input" type="email" placeholder="아이디 또는 이메일")
@@ -25,20 +21,20 @@ html
                 div(class="sns-wrap")
                     a(class="sns-btn" href="#페이스북으로 로그인")
                         div(class="sns-img-wrap")
-                            img(class="sns-img" alt="sns-icon" src="assets/img/facebook.png")
+                            img(class="sns-img" alt="sns-icon" src="/assets/img/facebook.png")
                         span(class="sns-text") 페이스북으로 로그인
                     a(class="sns-btn" href="#네이버로 로그인") 
                         div(class="sns-img-wrap")
-                            img(class="sns-img" alt="sns-icon" src="assets/img/naver.png")
+                            img(class="sns-img" alt="sns-icon" src="/assets/img/naver.png")
                         span(class="sns-text") 네이버로 로그인
                     a(class="sns-btn" href="#Apple로 로그인") 
                         div(class="sns-img-wrap")
-                            img(class="sns-img" alt="sns-icon" src="assets/img/apple.png")
+                            img(class="sns-img" alt="sns-icon" src="/assets/img/apple.png")
                         span(class="sns-text") Apple로 로그인
 
                 div(class="signup-text-wrap")
                     span(class="signup-text-normal") 혹시, 배달의 민족이 처음이신가요?
-                    a(class="signup-text-link") 회원가입
+                    a(class="signup-text-link" href="/signup/agreement") 회원가입
             
                 
 

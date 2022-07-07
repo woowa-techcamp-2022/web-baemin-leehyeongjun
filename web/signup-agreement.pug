@@ -1,0 +1,85 @@
+doctype html 
+html
+    include header.pug
+        link(rel="stylesheet" href="/assets/style/agreement.css")
+        title 회원가입
+    body 
+        div(class="viewport-container")
+            div(class="app-container")
+                header(class="app-header") 
+                    a(class="app-header-cancel-wrap" href="/login")
+                        img(class="app-header-cancel-img" alt="cancel" src="/assets/img/cancel.png")
+                    span(class="app-header-text") 회원가입
+                
+                div(class="explain-text-wrap")
+                    h1(class="explain-text") 어서오세요
+                    h1(class="explain-text") 약관동의가 필요해요
+
+                div(class="checkbox-all-wrap")
+                    input(type="checkbox" id="check-all")
+                    label(for="check-all" class="checkbox-label")
+                        span(class="checkbox-label-text") 전체 동의
+                form(class="check-box-form")
+                    ul(class="check-box-list-wrap")
+                        li(class="check-box-list")
+                            input(type="checkbox" id="usage-agreement")
+                            label(for="usage-agreement" class="checkbox-label")
+                                span(class="checkbox-label-text") 배달의민족 이용약관 동의
+                            a(class="right-arrow-wrap" href="#배달의민족이용약관동의")
+                                img(class="right-arrow" alt="arrow-icon" src="/assets/img/right-arrow.png")
+                        li(class="check-box-list")
+                            input(type="checkbox" id="e-trade-agreement")
+                            label(for="e-trade-agreement" class="checkbox-label")
+                                span(class="checkbox-label-text") 전자금융거래 이용약관 동의
+                            a(class="right-arrow-wrap" href="#전자금융거래이용약관동의")
+                                img(class="right-arrow" alt="arrow-icon" src="/assets/img/right-arrow.png")
+                        li(class="check-box-list")
+                            input(type="checkbox" id="personal-info-collect-agreement")
+                            label(for="personal-info-collect-agreement" class="checkbox-label")
+                                span(class="checkbox-label-text") 개인정보 수집이용 동의
+                            a(class="right-arrow-wrap" href="#개인정보수집이용동의")
+                                img(class="right-arrow" alt="arrow-icon" src="/assets/img/right-arrow.png")
+                        li(class="check-box-list")
+                            input(type="checkbox" id="personal-info-share-agreement")
+                            label(for="personal-info-share-agreement" class="checkbox-label")
+                                span(class="checkbox-label-text") 개인정보 제3자 제공 동의(선택)
+                            a(class="right-arrow-wrap" href="#개인정보제3자제공동의")
+                                img(class="right-arrow" alt="arrow-icon" src="/assets/img/right-arrow.png")
+                        li(class="check-box-list")
+                            input(type="checkbox" id="marketing-agreement")
+                            label(for="marketing-agreement" class="checkbox-label")
+                                span(class="checkbox-label-text") 마케팅 정보 메일, SNS 수신동의(선택)
+
+                ul(class="radio-wrap")
+                    li(class="radio-item")
+                        input(type="radio" name="age-radio" id="age-over-14" checked)
+                        label(for="age-over-14" class="radio-label")
+                            div(class="radio-text-wrap")
+                                span(class="radio-text") 만 14세 이상입니다.
+                            div(class="radio-img-wrap")
+                                img(class="radio-img" alt="radio-img" src="/assets/img/adult.png")
+                    li(class="radio-item")
+                        input(type="radio" name="age-radio" id="age-under-14")
+                        label(for="age-under-14" class="radio-label")
+                            div(class="radio-text-wrap")
+                                span(class="radio-text") 만 14세 미만입니다.
+                                span(class="radio-text sub") 본인확인이 된 보호자의 배민계정이 필요해요.
+                            div(class="radio-img-wrap")
+                                img(class="radio-img" alt="radio-img" src="/assets/img/child.png")
+
+                div(class="button-wrap")
+                    button(class="btn" disabled) 다음으로
+                    input(type="checkbox" id="valid-check")
+                    a(class="btn" href="#다음으로") 다음으로
+                
+
+                            
+
+                
+
+                
+
+
+                    
+                
+                
