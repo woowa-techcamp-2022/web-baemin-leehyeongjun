@@ -18,4 +18,11 @@ router.get("/phone", (req, res) => {
   res.status(200).type("html").send(html);
 });
 
+router.get("/email", (req, res) => {
+  const emailPath = join(ROOT_PATH, "web", "signup-email.pug");
+  const html = pug(emailPath, {});
+
+  res.status(200).type("html").send(html);
+});
+
 module.exports = router;
