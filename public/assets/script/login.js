@@ -11,7 +11,7 @@ function init() {
       target[key] = value;
       ["id", "pw"].forEach((key) => {
         target[`${key}Error`] =
-          target[`${key}Blured`] && target[`${key}`] === "";
+          target[`${key}Blurred`] && target[`${key}`] === "";
       });
       notify(target);
       return true;
@@ -22,8 +22,8 @@ function init() {
     {
       id: "",
       pw: "",
-      idBlured: false,
-      pwBlured: false,
+      idBlurred: false,
+      pwBlurred: false,
       idError: false,
       pwError: false,
     },
@@ -39,18 +39,18 @@ function init() {
 
   loginForm.addEventListener("focusout", (e) => {
     const key = e.target.name;
-    proxy[`${key}Blured`] = true;
+    proxy[`${key}Blurred`] = true;
   });
 
   loginForm.addEventListener("focusin", (e) => {
     const key = e.target.name;
-    proxy[`${key}Blured`] = false;
+    proxy[`${key}Blurred`] = false;
   });
 
   loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    proxy["idBlured"] = true;
-    proxy["pwBlured"] = true;
+    proxy["idBlurred"] = true;
+    proxy["pwBlurred"] = true;
   });
 }
 

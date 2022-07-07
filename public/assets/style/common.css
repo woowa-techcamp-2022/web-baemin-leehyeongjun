@@ -223,10 +223,6 @@ a {
 
 .app-header-next.disabled,
 .app-header-complete.disabled {
-  color: #eee;
-}
-
-.app-header-next.disabled {
   color: #999;
 }
 
