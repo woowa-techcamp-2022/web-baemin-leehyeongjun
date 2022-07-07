@@ -11,7 +11,9 @@ html
                     a(class="app-header-left-arrow-wrap" href="/login")
                         img(class="app-header-left-arrow-img" alt="cancel" src="/assets/img/left-arrow.png")
                     span(class="app-header-text") 회원가입
-                    a(class="app-header-next" href="/signup/email") 다음
+                    div(class="next-container")
+                        a(class="app-header-next disabled" href="#") 다음
+                        a(class="app-header-next hidden" href="/signup/email" role="next-btn") 다음
                 
                 div(class="input-wrap")
                     div(class="input-item not-valid" id="phone-container")

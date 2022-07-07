@@ -1,4 +1,8 @@
-import { generateRandomAuthCode } from "./util.js";
+import {
+  generateRandomAuthCode,
+  formatPhoneNumber,
+  checkPhoneNumber,
+} from "./util.js";
 
 function init() {
   const handler = {
@@ -7,6 +11,11 @@ function init() {
     },
     set: function (target, key, value) {
       target[key] = value;
+      if (key === "phone") {
+        target[key] = formatPhoneNumber(value);
+      }
+      target["isValidPhoneNumber"] = checkPhoneNumber(target["phone"]);
+      target["canGoNext"] = target["isValidPhoneNumber"] && target["auth"];
       notify(target);
       return true;
     },
@@ -18,6 +27,7 @@ function init() {
       isValidPhoneNumber: false,
       auth: "",
       authSended: false,
+      canGoNext: false,
     },
     handler
   );
@@ -65,8 +75,9 @@ function notify(proxy) {
   const authInput = document.querySelector('input[name="auth"]');
   const authSendButton = document.querySelector(".button-wrap");
   const authReSendButton = document.querySelector(".auth-re-send-wrap");
+  const nextButton = document.querySelector('a[role="next-btn"]');
 
-  const { phone, auth, isValidPhoneNumber, authSended } = proxy;
+  const { phone, auth, isValidPhoneNumber, authSended, canGoNext } = proxy;
 
   phoneInput.value = phone;
   if (phone) phoneClearIcon.classList.remove("hidden");
@@ -90,6 +101,12 @@ function notify(proxy) {
     authReSendButton.classList.remove("hidden");
   } else {
     authContainer.classList.add("hidden");
+  }
+
+  if (canGoNext) {
+    nextButton.classList.remove("hidden");
+  } else {
+    nextButton.classList.add("hidden");
   }
 }
 

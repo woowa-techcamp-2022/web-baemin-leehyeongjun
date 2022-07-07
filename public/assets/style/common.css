@@ -217,8 +217,13 @@ a {
 .app-header-complete {
   position: absolute;
   right: 1.2rem;
-  top: 0.9rem;
+  top: 1rem;
   color: #000;
+}
+
+.app-header-next.disabled,
+.app-header-complete.disabled {
+  color: #eee;
 }
 
 .app-header-next.disabled {
