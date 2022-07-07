@@ -1,6 +1,7 @@
 const express = require("express");
 const { pug } = require("../util/pug");
 const { ROOT_PATH, join } = require("../util/path");
+const signupRouter = require("./signup");
 
 const app = express();
 
@@ -18,5 +19,7 @@ app.get("/login", (req, res) => {
 
   res.status(200).type("html").send(html);
 });
+
+app.use("/signup", signupRouter);
 
 app.listen(3000);

@@ -1,27 +1,6 @@
 /**
  * 로그인 페이지
  */
-.app-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.app-header .app-header-cancel-wrap {
-  position: absolute;
-  left: 1.2rem;
-  top: 0.9rem;
-  width: 1.2rem;
-  height: 1.2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.app-header-cancel-wrap .app-header-cancel-img {
-  width: 1.2rem;
-  height: 1.2rem;
-}
-
 .login-form {
   display: flex;
   flex-direction: column;
