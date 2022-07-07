@@ -11,4 +11,11 @@ router.get("/agreement", (req, res) => {
   res.status(200).type("html").send(html);
 });
 
+router.get("/phone", (req, res) => {
+  const phonePath = join(ROOT_PATH, "web", "signup-phone.pug");
+  const html = pug(phonePath, {});
+
+  res.status(200).type("html").send(html);
+});
+
 module.exports = router;

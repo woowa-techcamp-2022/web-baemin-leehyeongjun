@@ -186,7 +186,23 @@ a {
   align-items: center;
 }
 
+.app-header .app-header-left-arrow-wrap {
+  position: absolute;
+  left: 1.2rem;
+  top: 0.9rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .app-header-cancel-wrap .app-header-cancel-img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.app-header-left-arrow-wrap .app-header-left-arrow-img {
   width: 1.2rem;
   height: 1.2rem;
 }
@@ -195,6 +211,17 @@ a {
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 3.125rem;
+}
+
+.app-header-next {
+  position: absolute;
+  right: 1.2rem;
+  top: 0.9rem;
+  color: #000;
+}
+
+.app-header-next.disabled {
+  color: #999;
 }
 
 .btn {
@@ -243,4 +270,32 @@ a {
 .right-arrow-wrap .right-arrow {
   width: 1.5rem;
   height: 2rem;
+}
+
+.clear-icon {
+  background-color: #888;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  line-height: 1.2rem;
+  right: 2.8rem;
+  bottom: 0.4rem;
+}
+
+.valid-icon {
+  background: url("/assets/img/check-nobg.svg") no-repeat;
+  background-position: 50%;
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  position: absolute;
+  right: 0.4rem;
+  bottom: 0.4rem;
+  filter: invert(86%) sepia(19%) saturate(2396%) hue-rotate(133deg)
+    brightness(82%) contrast(79%);
 }
