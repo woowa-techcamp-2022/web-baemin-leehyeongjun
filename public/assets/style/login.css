@@ -9,8 +9,26 @@
   margin-top: 3rem;
 }
 
+.login-form .input-wrap {
+  width: 100%;
+  position: relative;
+}
+
 .login-form .input {
+  width: calc(100% - 1rem);
   margin-bottom: 2rem;
+}
+
+.input-wrap.error .input {
+  border-color: red;
+}
+
+.input-wrap.error .error-text {
+  left: 0rem;
+  bottom: 1rem;
+  color: red;
+  font-size: 85%;
+  white-space: nowrap;
 }
 
 .login-form .btn {

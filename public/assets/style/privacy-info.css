@@ -74,11 +74,6 @@
   border-color: red;
 }
 
-.error-text {
-  position: absolute;
-  left: -10000px;
-}
-
 .input-item.error .error-text {
   left: 0rem;
   bottom: -1.2rem;

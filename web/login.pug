@@ -3,6 +3,7 @@ html
     include header.pug
         link(rel="stylesheet" href="/assets/style/login.css")
         title 로그인
+        script(defer type="module" src="/assets/script/login.js")
     body 
         div(class="viewport-container")
             div(class="app-container")
@@ -10,9 +11,13 @@ html
                     a(class="app-header-cancel-wrap" href="/")
                         img(class="app-header-cancel-img" alt="cancel" src="/assets/img/cancel.png")
                     span(class="app-header-text") 로그인
-                form(class="login-form")
-                    input(class="input" type="email" placeholder="아이디 또는 이메일")
-                    input(class="input" type="password" placeholder="비밀번호")
+                form(class="login-form" method="post")
+                    div(class="input-wrap id-container")
+                        input(class="input" name="id" type="text" placeholder="아이디 또는 이메일")
+                        span(class="error-text") 아이디 또는 이메일을 입력해주세요
+                    div(class="input-wrap pw-container")
+                        input(class="input" name="pw" type="password" placeholder="비밀번호")
+                        span(class="error-text") 비밀번호를 입력해주세요
                     button(class="btn") 로그인
                 div(class="find-wrap")
                     a(class="find" class="" href="#아이디찾기") 아이디 찾기

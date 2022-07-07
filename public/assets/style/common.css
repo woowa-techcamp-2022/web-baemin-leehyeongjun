@@ -300,3 +300,8 @@ a {
   filter: invert(86%) sepia(19%) saturate(2396%) hue-rotate(133deg)
     brightness(82%) contrast(79%);
 }
+
+.error-text {
+  position: absolute;
+  left: -10000px;
+}
