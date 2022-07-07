@@ -1,0 +1,119 @@
+/**
+ * 회원가입 휴대폰번호 이메일 및 기타정보 입력
+ */
+
+.input-wrap {
+  margin-top: 2rem;
+  width: calc(100% - 2.4rem);
+  padding: 0 1.2rem;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  margin-bottom: 2rem;
+}
+
+.input-divider {
+  width: calc(100% - 7rem);
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.dup-check-button {
+  width: 5rem;
+  margin-left: 1.2rem;
+  height: 2rem;
+  background-color: #fff;
+  border: 1px solid #eee;
+}
+
+.dup-check-button:disabled {
+  color: #999;
+}
+
+.input-wrap .input-item {
+  height: 4rem;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.input-item.error {
+  position: relative;
+}
+
+.input-item input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  outline: none;
+  height: 1rem;
+}
+
+.input-item .input-text {
+  position: absolute;
+  top: 0.2rem;
+  color: #999;
+}
+
+.input-item input:focus {
+  border-color: #000;
+}
+
+.input-item.error input:focus {
+  border-color: red;
+}
+
+.input-item.error input {
+  border-color: red;
+}
+
+.error-text {
+  position: absolute;
+  left: -10000px;
+}
+
+.input-item.error .error-text {
+  left: 0rem;
+  bottom: -1.2rem;
+  color: red;
+  font-size: 85%;
+  white-space: nowrap;
+}
+
+.input-item input:focus + .input-text {
+  color: #000;
+}
+
+.button-wrap {
+  width: calc(100% - 2.4rem);
+  padding: 0 1.2rem;
+}
+
+.auth-send-btn {
+  width: 100%;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #000;
+  font-size: 1rem;
+
+  height: 4rem;
+}
+
+.auth-re-send-wrap {
+  width: calc((100% - 2.4rem));
+  padding: 0 1.2rem;
+
+  margin-top: 2rem;
+  text-align: right;
+}
+
+.auth-re-send-btn {
+  color: #2ac1bc;
+}
