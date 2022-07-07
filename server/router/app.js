@@ -38,4 +38,10 @@ app.get("/logout", (req, res) => {
 app.use("/signup", signupRouter);
 app.use("/api", apiRouter);
 
+app.get("*", (req, res) => {
+  res
+    .status(404)
+    .send(`<h1>페이지가 존재하지 않습니다.</h1><a href="/">홈으로</a>`);
+});
+
 app.listen(3000);
