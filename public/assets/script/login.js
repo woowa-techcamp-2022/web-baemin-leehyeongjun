@@ -5,7 +5,6 @@ function init() {
     },
     set: function (target, key, value) {
       target[key] = value;
-
       ["id", "pw"].forEach((key) => {
         target[`${key}Error`] =
           target[`${key}Blured`] && target[`${key}`] === "";

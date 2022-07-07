@@ -301,7 +301,16 @@ a {
     brightness(82%) contrast(79%);
 }
 
+.not-valid .valid-icon {
+  filter: invert(100%) sepia(0%) saturate(5213%) hue-rotate(101deg)
+    brightness(91%) contrast(90%);
+}
+
 .error-text {
   position: absolute;
   left: -10000px;
+}
+
+.hidden {
+  display: none !important;
 }
