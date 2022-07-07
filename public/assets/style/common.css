@@ -285,7 +285,7 @@ a {
   text-align: center;
   line-height: 1.2rem;
   right: 2.8rem;
-  bottom: 0.4rem;
+  bottom: 0.8rem;
 }
 
 .valid-icon {
@@ -296,7 +296,7 @@ a {
   height: 1.2rem;
   position: absolute;
   right: 0.4rem;
-  bottom: 0.4rem;
+  bottom: 0.8rem;
   filter: invert(86%) sepia(19%) saturate(2396%) hue-rotate(133deg)
     brightness(82%) contrast(79%);
 }
