@@ -1,3 +1,7 @@
+/**
+ * 휴대폰 번호 입력 페이지
+ */
+
 import {
   generateRandomAuthCode,
   formatPhoneNumber,
@@ -14,8 +18,8 @@ function init() {
       if (key === "phone") {
         target[key] = formatPhoneNumber(value);
       }
-      target["isValidPhoneNumber"] = checkPhoneNumber(target["phone"]);
-      target["canGoNext"] = target["isValidPhoneNumber"] && target["auth"];
+      target["phoneChecked"] = checkPhoneNumber(target["phone"]);
+      target["canGoNext"] = target["phoneChecked"] && target["auth"];
       notify(target);
       return true;
     },
@@ -24,7 +28,7 @@ function init() {
   const proxy = new Proxy(
     {
       phone: "",
-      isValidPhoneNumber: false,
+      phoneChecked: false,
       auth: "",
       authSended: false,
       canGoNext: false,
@@ -77,7 +81,7 @@ function notify(proxy) {
   const authReSendButton = document.querySelector(".auth-re-send-wrap");
   const nextButton = document.querySelector('a[role="next-btn"]');
 
-  const { phone, auth, isValidPhoneNumber, authSended, canGoNext } = proxy;
+  const { phone, auth, phoneChecked, authSended, canGoNext } = proxy;
 
   phoneInput.value = phone;
   if (phone) phoneClearIcon.classList.remove("hidden");
@@ -92,7 +96,7 @@ function notify(proxy) {
     authContainer.classList.add("not-valid");
   }
 
-  if (isValidPhoneNumber) phoneContainer.classList.remove("not-valid");
+  if (phoneChecked) phoneContainer.classList.remove("not-valid");
   else phoneContainer.classList.add("not-valid");
 
   if (authSended) {
