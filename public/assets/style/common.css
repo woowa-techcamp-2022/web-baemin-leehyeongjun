@@ -217,8 +217,13 @@ a {
 .app-header-complete {
   position: absolute;
   right: 1.2rem;
-  top: 0.9rem;
+  top: 1rem;
   color: #000;
+}
+
+.app-header-next.disabled,
+.app-header-complete.disabled {
+  color: #eee;
 }
 
 .app-header-next.disabled {
@@ -285,7 +290,7 @@ a {
   text-align: center;
   line-height: 1.2rem;
   right: 2.8rem;
-  bottom: 0.4rem;
+  bottom: 0.8rem;
 }
 
 .valid-icon {
@@ -296,12 +301,21 @@ a {
   height: 1.2rem;
   position: absolute;
   right: 0.4rem;
-  bottom: 0.4rem;
+  bottom: 0.8rem;
   filter: invert(86%) sepia(19%) saturate(2396%) hue-rotate(133deg)
     brightness(82%) contrast(79%);
+}
+
+.not-valid .valid-icon {
+  filter: invert(100%) sepia(0%) saturate(5213%) hue-rotate(101deg)
+    brightness(91%) contrast(90%);
 }
 
 .error-text {
   position: absolute;
   left: -10000px;
+}
+
+.hidden {
+  display: none !important;
 }

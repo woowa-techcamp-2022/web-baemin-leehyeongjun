@@ -27,6 +27,14 @@ function init() {
         return prev && target[v];
       }, true);
 
+      target["canGoNext"] = [
+        "usage-agreement",
+        "e-trade-agreement",
+        "personal-info-collect-agreement",
+      ].reduce((prev, value) => {
+        return prev && target[value];
+      }, true);
+
       notify(target);
       return true;
     },
@@ -42,6 +50,7 @@ function init() {
       "marketing-agreement": false,
       "age-over-14": false,
       "age-under-14": false,
+      canGoNext: false,
     },
     handler
   );
@@ -70,16 +79,8 @@ function notify(proxy) {
     el.checked = proxy[id];
   });
 
-  const canGoNext = [
-    "usage-agreement",
-    "e-trade-agreement",
-    "personal-info-collect-agreement",
-  ].reduce((prev, value) => {
-    return prev && proxy[value];
-  }, true);
-
   const nextButtonValidChecker = document.getElementById("valid-check");
-  nextButtonValidChecker.checked = canGoNext;
+  nextButtonValidChecker.checked = proxy["canGoNext"];
 }
 
 init();

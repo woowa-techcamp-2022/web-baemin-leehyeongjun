@@ -3,6 +3,7 @@ html
     include header.pug
         link(rel="stylesheet" href="/assets/style/privacy-info.css")
         title 회원가입
+        script(defer type="module" src="/assets/script/phone.js")
     body 
         div(class="viewport-container")
             div(class="app-container")
@@ -10,23 +11,25 @@ html
                     a(class="app-header-left-arrow-wrap" href="/login")
                         img(class="app-header-left-arrow-img" alt="cancel" src="/assets/img/left-arrow.png")
                     span(class="app-header-text") 회원가입
-                    a(class="app-header-next" href="/signup/email") 다음
+                    div(class="next-container")
+                        a(class="app-header-next disabled" href="#") 다음
+                        a(class="app-header-next hidden" href="/signup/email" role="next-btn") 다음
                 
                 div(class="input-wrap")
-                    div(class="input-item")
-                        input(type="tel")
+                    div(class="input-item not-valid" id="phone-container")
+                        input(type="tel" name="phone")
                         span(class="input-text") 휴대전화
-                        i(class="clear-icon") X
+                        i(class="clear-icon hidden" role="phone-clear-icon") X
                         i(class="valid-icon")
 
-                    div(class="input-item")
-                        input(type="tel")
+                    div(class="input-item hidden not-valid" id="auth-container")
+                        input(type="tel" name="auth")
                         span(class="input-text") 인증번호
-                        i(class="clear-icon") X
+                        i(class="clear-icon hidden" role="auth-clear-icon") X
                         i(class="valid-icon")
                 
                 div(class="button-wrap")
-                    button(class="auth-send-btn") 인증번호 받기
+                    button(class="auth-send-btn" role="auth-send-btn") 인증번호 받기
 
-                div(class="auth-re-send-wrap")
-                    a(class="auth-re-send-btn" href="#인증번호다시받기") 인증번호 다시받기
+                div(class="auth-re-send-wrap hidden")
+                    a(class="auth-re-send-btn" role="auth-re-send-btn") 인증번호 다시받기
