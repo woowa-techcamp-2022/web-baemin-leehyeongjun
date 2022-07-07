@@ -51,6 +51,8 @@ function init() {
     e.preventDefault();
     proxy["idBlurred"] = true;
     proxy["pwBlurred"] = true;
+
+    login(proxy["id"], proxy["pw"]);
   });
 }
 
@@ -70,6 +72,23 @@ function notify(proxy) {
   } else {
     pwContainer.classList.remove("error");
   }
+}
+
+async function login(id, pw) {
+  const res = await fetch("/api/login", {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ email: id, password: pw }),
+  });
+
+  if (res.status === 200) {
+    window.location.href = "/";
+    return;
+  }
+  const json = await res.json();
+  alert(json.error);
 }
 
 init();
