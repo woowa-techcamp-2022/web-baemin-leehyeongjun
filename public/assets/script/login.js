@@ -1,3 +1,7 @@
+/**
+ * 로그인 페이지
+ */
+
 function init() {
   const handler = {
     get: function (target, key) {

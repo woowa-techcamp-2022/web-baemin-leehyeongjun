@@ -1,3 +1,7 @@
+/**
+ * 휴대폰 번호 입력 페이지
+ */
+
 import {
   generateRandomAuthCode,
   formatPhoneNumber,
