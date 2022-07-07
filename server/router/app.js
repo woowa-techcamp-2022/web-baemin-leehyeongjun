@@ -3,7 +3,8 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const { pug } = require("../util/pug");
 const { ROOT_PATH, join } = require("../util/path");
-const { setSession } = require("../middleware/session");
+const { setSession, getSession } = require("../middleware/session");
+const { redirectLoginUser } = require("../middleware/login-redirect");
 const signupRouter = require("./signup");
 const apiRouter = require("./api");
 
@@ -15,12 +16,13 @@ app.use(express.static("public"));
 app.use(setSession);
 
 app.get("/", (req, res) => {
+  const session = getSession(req);
   const mainPath = join(ROOT_PATH, "web", "main.pug");
-  const html = pug(mainPath, {});
+  const html = pug(mainPath, { nickname: session["nickname"] });
   res.status(200).type("html").send(html);
 });
 
-app.get("/login", (req, res) => {
+app.get("/login", redirectLoginUser, (req, res) => {
   const loginPath = join(ROOT_PATH, "web", "login.pug");
   const html = pug(loginPath, {});
 

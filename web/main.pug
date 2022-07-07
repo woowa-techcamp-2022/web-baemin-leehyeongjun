@@ -10,14 +10,22 @@ html
                     span(class="app-header-text") My배민
                 div(class="banner-wrap")
                     img(class="banner-img" alt="banner-image" src="/assets/img/banner.png")
-                
-                a(class="profile-wrap" href="/login")
-                    div(class="profile-img-holder")
-                        img(class="profile-img" alt="profile" src="/assets/img/user.png")
-                    div(class="profile-text-wrap")
-                        span(class="profile-text") 로그인해주세요
-                    div(class="right-arrow-wrap")
-                        img(class="right-arrow" alt="profile-right-arrow" src="/assets/img/right-arrow.png")
+                if nickname
+                    a(class="profile-wrap" href="javascript:if(confirm('로그아웃 하시겠습니까?')){window.location.href = '/logout'}")
+                        div(class="profile-img-holder")
+                            img(class="profile-img" alt="profile" src="/assets/img/user.png")
+                        div(class="profile-text-wrap")
+                            span(class="profile-text") #{nickname}님 환영합니다
+                        div(class="right-arrow-wrap")
+                            img(class="right-arrow" alt="profile-right-arrow" src="/assets/img/right-arrow.png")
+                else
+                    a(class="profile-wrap" href="/login")
+                        div(class="profile-img-holder")
+                            img(class="profile-img" alt="profile" src="/assets/img/user.png")
+                        div(class="profile-text-wrap")
+                            span(class="profile-text") 로그인해주세요
+                        div(class="right-arrow-wrap")
+                            img(class="right-arrow" alt="profile-right-arrow" src="/assets/img/right-arrow.png")
                 
                 div(class="grid-menu-wrap")
                     ul(class="row")

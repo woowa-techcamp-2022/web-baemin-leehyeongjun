@@ -11,6 +11,10 @@ function setSession(req, res, next) {
       expires: 0,
       httpOnly: true,
     });
+  } else {
+    if (!sessions.has(req.cookies["sid"])) {
+      sessions.set(req.cookies["sid"], {});
+    }
   }
   next();
 }
