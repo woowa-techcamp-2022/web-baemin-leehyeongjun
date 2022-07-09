@@ -148,18 +148,18 @@ import { checkBirth, checkPassword, formatBirth, hash } from "./util.js";
     } = proxy;
 
     emailInput.value = email;
-    setElementHidden(emailClearButton, !!email);
+    setElementHidden(emailClearButton, !email);
     setElementHidden(nicknameContainer, !emailChecked);
     setElementHidden(passwordContainer, !emailChecked);
     setElementHidden(birthContainer, !emailChecked);
     setElementValidation(emailContainer, emailChecked);
 
     nicknameInput.value = nickname;
-    setElementHidden(nicknameClearButton, !!nickname);
+    setElementHidden(nicknameClearButton, !nickname);
     setElementValidation(nicknameContainer, !!nickname);
 
     passwordInput.value = password;
-    setElementHidden(passwordClearButton, !!password);
+    setElementHidden(passwordClearButton, !password);
 
     if (passwordBlurred) {
       setElementError(passwordContainer, !passwordChecked);
@@ -167,7 +167,7 @@ import { checkBirth, checkPassword, formatBirth, hash } from "./util.js";
     }
 
     birthInput.value = birth;
-    setElementHidden(birthClearButton, !!birth);
+    setElementHidden(birthClearButton, !birth);
 
     if (birthBlurred) {
       setElementValidation(birthContainer, birthChecked);
