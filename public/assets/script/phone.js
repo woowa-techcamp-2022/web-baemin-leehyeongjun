@@ -99,10 +99,10 @@ import {
     const { phone, auth, phoneChecked, authSended, canGoNext } = proxy;
 
     phoneInput.value = phone;
-    setElementHidden(phoneClearIcon, !!phone);
+    setElementHidden(phoneClearIcon, !phone);
 
     authInput.value = auth;
-    setElementHidden(authClearIcon, !!auth);
+    setElementHidden(authClearIcon, !auth);
     setElementValidation(authContainer, !!auth);
 
     setElementValidation(phoneContainer, phoneChecked);
