@@ -19,28 +19,28 @@ html
                     div(class="flex-row")
                         div(class="input-divider")
                             div(class="input-item not-valid" id="email-container")
-                                input(type="email" name="email")
+                                input(class="input" type="email" name="email")
                                 span(class="input-text") 이메일
-                                i(class="clear-icon hidden" role="email-clear-button") X
+                                a(class="clear-icon hidden" role="email-clear-button" href="javascript:void(0)") X
                                 i(class="valid-icon")
                         button(class="dup-check-button" role="dup-check-button") 중복확인
 
                     div(class="input-item not-valid hidden" id="nickname-container")
-                        input(type="text" name="nickname")
+                        input(class="input" type="text" name="nickname")
                         span(class="input-text") 닉네임
-                        i(class="clear-icon hidden" role="nickname-clear-button") X
+                        a(class="clear-icon hidden" role="nickname-clear-button" href="javascript:void(0)") X
                         i(class="valid-icon")
 
                     div(class="input-item not-valid hidden" id="password-container")
-                        input(type="password" name="password" maxlength="20")
+                        input(class="input" type="password" name="password" maxlength="20")
                         span(class="input-text") 비밀번호
-                        i(class="clear-icon hidden" role="password-clear-button") X
+                        a(class="clear-icon hidden" role="password-clear-button" href="javascript:void(0)") X
                         i(class="valid-icon")
                         span(class="error-text") 10자 이상 영어 대문자, 소문자, 숫자, 특수문자 중 2종류를 조합해야합니다.
 
                     div(class="input-item not-valid hidden" id="birth-container")
-                        input(type="tel" name="birth")
+                        input(class="input" type="tel" name="birth")
                         span(class="input-text") 생년월일
-                        i(class="clear-icon hidden" role="birth-clear-button") X
+                        a(class="clear-icon hidden" role="birth-clear-button" href="javascript:void(0)") X
                         i(class="valid-icon")
                         span(class="error-text") 올바른 생년월일이 아닙니다.

@@ -29,6 +29,7 @@
   height: 2rem;
   background-color: #fff;
   border: 1px solid #eee;
+  color: #000;
 }
 
 .dup-check-button:disabled {

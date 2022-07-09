@@ -73,8 +73,8 @@ function init() {
 function notify(proxy) {
   const phoneContainer = document.getElementById("phone-container");
   const authContainer = document.getElementById("auth-container");
-  const phoneClearIcon = document.querySelector("i[role='phone-clear-icon']");
-  const authClearIcon = document.querySelector("i[role='auth-clear-icon']");
+  const phoneClearIcon = document.querySelector("*[role='phone-clear-icon']");
+  const authClearIcon = document.querySelector("*[role='auth-clear-icon']");
   const phoneInput = document.querySelector('input[name="phone"]');
   const authInput = document.querySelector('input[name="auth"]');
   const authSendButton = document.querySelector(".button-wrap");
