@@ -19,6 +19,7 @@ import {
     authInput,
     authSendButton,
     authSendButtonWrap,
+    authResendButtonWrap,
     authReSendButton,
     nextButton,
   ] = select([
@@ -31,6 +32,7 @@ import {
     ".auth-send-btn",
     ".button-wrap",
     ".auth-re-send-wrap",
+    ".auth-re-send-btn",
     'a[role="next-btn"]',
   ]);
 
@@ -73,7 +75,7 @@ import {
 
     appContainer.addEventListener("click", (e) => {
       const element = e.target;
-      console.log(element);
+      console.log(element === authReSendButton);
       switch (element) {
         case authSendButton:
           proxy.authSended = true;
@@ -108,7 +110,7 @@ import {
     setElementValidation(phoneContainer, phoneChecked);
     setElementHidden(authContainer, !authSended);
     setElementHidden(authSendButtonWrap, authSended);
-    setElementHidden(authReSendButton, !authSended);
+    setElementHidden(authResendButtonWrap, !authSended);
 
     setElementHidden(nextButton, !canGoNext);
   }
