@@ -102,22 +102,22 @@ function init() {
 
 function notify(proxy) {
   const emailClearButton = document.querySelector(
-    'i[role="email-clear-button"]'
+    '*[role="email-clear-button"]'
   );
   const emailContainer = document.getElementById("email-container");
   const emailInput = document.querySelector('input[name="email"]');
   const nicknameClearButton = document.querySelector(
-    'i[role="nickname-clear-button"]'
+    '*[role="nickname-clear-button"]'
   );
   const nicknameContainer = document.getElementById("nickname-container");
   const nicknameInput = document.querySelector('input[name="nickname"]');
   const passwordClearButton = document.querySelector(
-    'i[role="password-clear-button"]'
+    '*[role="password-clear-button"]'
   );
   const passwordContainer = document.getElementById("password-container");
   const passwordInput = document.querySelector('input[name="password"]');
   const birthClearButton = document.querySelector(
-    'i[role="birth-clear-button"]'
+    '*[role="birth-clear-button"]'
   );
   const birthContainer = document.getElementById("birth-container");
   const birthInput = document.querySelector('input[name="birth"]');
