@@ -17,13 +17,13 @@ html
                 
                 div(class="input-wrap")
                     div(class="input-item not-valid" id="phone-container")
-                        input(type="tel" name="phone")
+                        input(class="input" type="tel" name="phone")
                         span(class="input-text") 휴대전화
                         i(class="clear-icon hidden" role="phone-clear-icon") X
                         i(class="valid-icon")
 
                     div(class="input-item hidden not-valid" id="auth-container")
-                        input(type="tel" name="auth")
+                        input(class="input" type="tel" name="auth" maxlength="4")
                         span(class="input-text") 인증번호
                         i(class="clear-icon hidden" role="auth-clear-icon") X
                         i(class="valid-icon")
