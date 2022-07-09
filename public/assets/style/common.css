@@ -154,6 +154,8 @@ a {
     width: 100%;
     margin: 0;
     height: unset;
+    max-height: max-content;
+    padding-bottom: 3rem;
   }
 }
 
