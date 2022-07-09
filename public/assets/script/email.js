@@ -31,18 +31,18 @@ import { checkBirth, checkPassword, formatBirth, hash } from "./util.js";
     ".app-container",
     ".dup-check-button",
     '*[role="email-clear-button"]',
-    "email-container",
+    "#email-container",
     'input[name="email"]',
     '*[role="nickname-clear-button"]',
-    "nickname-container",
+    "#nickname-container",
     'input[name="nickname"]',
     '*[role="password-clear-button"]',
-    "password-container",
+    "#password-container",
     'input[name="password"]',
     '*[role="birth-clear-button"]',
-    "birth-container",
+    "#birth-container",
     'input[name="birth"]',
-    "complete-button",
+    "#complete-button",
   ]);
 
   function init() {
@@ -149,9 +149,9 @@ import { checkBirth, checkPassword, formatBirth, hash } from "./util.js";
 
     emailInput.value = email;
     setElementHidden(emailClearButton, !!email);
-    setElementHidden(nicknameContainer, emailChecked);
-    setElementHidden(passwordContainer, emailChecked);
-    setElementHidden(birthContainer, emailChecked);
+    setElementHidden(nicknameContainer, !emailChecked);
+    setElementHidden(passwordContainer, !emailChecked);
+    setElementHidden(birthContainer, !emailChecked);
     setElementValidation(emailContainer, emailChecked);
 
     nicknameInput.value = nickname;
@@ -162,7 +162,7 @@ import { checkBirth, checkPassword, formatBirth, hash } from "./util.js";
     setElementHidden(passwordClearButton, !!password);
 
     if (passwordBlurred) {
-      setElementError(passwordContainer, passwordChecked);
+      setElementError(passwordContainer, !passwordChecked);
       setElementValidation(passwordContainer, passwordChecked);
     }
 
@@ -171,9 +171,9 @@ import { checkBirth, checkPassword, formatBirth, hash } from "./util.js";
 
     if (birthBlurred) {
       setElementValidation(birthContainer, birthChecked);
-      setElementError(birthContainer, birthChecked);
+      setElementError(birthContainer, !birthChecked);
     }
-    setElementHidden(completeButton, canComplete);
+    setElementHidden(completeButton, !canComplete);
   }
 
   function postUser(email, password, nickname) {
