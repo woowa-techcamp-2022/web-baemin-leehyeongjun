@@ -81,7 +81,8 @@ function checkPassword(text) {
 }
 
 function checkBirth(text) {
-  return !isNaN(new Date(text).valueOf());
+  const date = new Date(text.replace(/\./g, "-"));
+  return date.toString() !== "Invalid Date";
 }
 
 function formatBirth(text) {
