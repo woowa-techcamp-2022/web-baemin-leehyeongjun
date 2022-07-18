@@ -2,6 +2,11 @@
 
 ## 데모
 https://web-baemin-leehyeongjun.herokuapp.com/
+
+## 위키
+[기술적인 도전](https://github.com/woowa-techcamp-2022/web-baemin-leehyeongjun/wiki/%EA%B8%B0%EC%88%A0%EC%A0%81%EC%9D%B8-%EB%8F%84%EC%A0%84)
+
+# 구현화면
 ## 메인페이지
 ![image](https://user-images.githubusercontent.com/49009864/177820321-beb5f496-a680-40a2-824a-79e2cc2178da.png)
 
